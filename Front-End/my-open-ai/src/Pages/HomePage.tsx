@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const HomePage = () => {
+// import { Features } from "../Componants/features/Features";
+import { Header } from "../Componants/header/Header";
+import { Features } from "../Componants/features/Features";
+
+const HomePage: React.FC = () => {
   return (
     <div>
-      Home Page
+      <Header />
+      <Features />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

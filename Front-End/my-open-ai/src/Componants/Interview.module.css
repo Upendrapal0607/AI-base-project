@@ -1,0 +1,86 @@
+/* .chatbox_start{
+    list-style: none;
+    overflow-y: auto;
+    height: 300px;
+    padding: 15px 20px 100px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+  } */
+  .sow_message_box{
+
+    overflow-y: auto;
+    font-size: large;
+    border: 2px solid red;
+    display: flex;
+    gap: 10px;
+    margin: 30px 0px 30px 0px;
+
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .input,.output{
+    border: 0px solid green;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0px 10px;
+
+  }
+  .input{
+    justify-content: flex-end;
+    padding: 12px 16px;
+    margin-bottom: 4rem;
+    border-radius: 10px 10px 0px 10px;
+    background-color: aqua;
+  }
+  .output{
+    margin-top: 4rem;
+    color: #f2f2f2;
+    background: rgb(20 20 20);
+
+
+  }
+  .messsage_box {
+    display: flex;
+    background-color: rgb(0 0 0);
+    /* border: 10px solid red; */
+    gap: 1rem;
+    border: 0px solid blue;
+    border-radius: 0px 0px 1rem 1rem;
+    padding: 20px;
+  }
+
+.input_text{
+    width: 95%;
+    outline: none;
+    border: none;
+  
+    margin: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+  
+    background-color:#ffff;
+    color: rgb(20 20 20);
+    border-radius: 1rem;
+}
+.input_btn{
+    cursor: pointer;
+    color: hwb(0 0% 100% / 0.192);
+    background: #fff;
+    border: none;
+    margin: 5px 10px;
+    padding: 0px 10px;
+    /* font-size: 1rem;
+    font-weight: 600; */
+  
+    flex: end;
+    height: 30px;
+    border-radius: 8px;
+    align-self: center;
+}
