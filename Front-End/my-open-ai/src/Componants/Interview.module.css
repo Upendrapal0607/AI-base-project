@@ -13,11 +13,19 @@
     justify-content: center;
     font-size: large;
   } */
+  /* .main_question{
+    margin:128px auto;
+    width: 80%;
+    /* margin-top: 20px; */
+
+
+
+  /* {"m-auto w-2/3 mt-16"} */
   .sow_message_box{
 
     overflow-y: auto;
     font-size: large;
-    border: 2px solid red;
+    border: 0px solid red;
     display: flex;
     gap: 10px;
     margin: 30px 0px 30px 0px;
@@ -35,6 +43,7 @@
   .input{
     justify-content: flex-end;
     padding: 12px 16px;
+    width:30%;
     margin-bottom: 4rem;
     border-radius: 10px 10px 0px 10px;
     background-color: aqua;
@@ -84,3 +93,9 @@
     border-radius: 8px;
     align-self: center;
 }
+
+/* @media (max-width: 550px) {
+  .main_question{
+    width: 3/3;
+  }
+} */

@@ -17,7 +17,8 @@ const Question = ({ sevectValue }) => {
   const [inputvalue, setInputValue] = React.useState("")
   const [micStart, setMicStart] = React.useState(false)
    let [data,setData]=useState([])
-   let arr=[]
+   const [Loading,setLoading]=useState(false)
+  
   const miceStyle = {
     color: "#0c66ec",
     fontSize: "20px"
@@ -49,33 +50,46 @@ const Question = ({ sevectValue }) => {
 
   const handleFetchData = () => {
     // sevectValue=="JavaScript Developer"?
-    let topicArr=[]
+    // let topicArr=[0,0]
+    console.log({data});
+    
     let bodyObject = {
       type:sevectValue,
-      customPrompt: ``,
-      topics:topicArr,
+      customPrompt:"",
       userPreferences: "", experienceLevel: "beginner",
-      questionStyle: "theoretical"
+      questionStyle: "theoretical",
+      topics:inputvalue
     }
-    console.log({bodyObject})
-   
+    // setLoading(true);
+    const newEntry = { question: inputvalue,answer:"Thinking..."};
+    setData(prev => [...prev, newEntry]);
+    // topicArr[0]=inputvalue
+    // setData(prev=>[...prev,topicArr])
     axios.post("http://localhost:8080/interview/generate-interview-questions", bodyObject).then(res => {
-      console.log(res.data)
+      console.log(res.data.question)
+      const newEntry = { question: inputvalue, answer: res.data.question };
+      // setData((prev) => [...prev, newEntry]);
+      setData(prev => [...prev.slice(0, -1), newEntry]);
     }).catch(err => {
       console.log({ err })
-    })
+    }) .finally(() => {
+
+      // setLoading(false);
+    });
     setInputValue("")
   }
 
   return (
-    <div style={{ width: "100%", border: "2px solid red" }}>
-      {arr.map((el, i) => <div className={style.sow_message_box}>
-        <div className={style.input}>how I can assist youhow I can assist you how I can assist you how I can assist youhow I can assist you how I can assist youhow I can assist you how I can assist you how I can assist youhow I can assist you</div>
-        <div className={style.output}>how I can assist youhow I can assist you how I can assist you how I can assist youhow I can assist you how I can assist youhow I can assist you how I can assist you how I can assist youhow I can assist you</div>
+    <div style={{ width: "100%", border: "0px solid red" }}>
+      {data.map((el, i) => <div className={style.sow_message_box}>
+        {/* <div className={style.input}>{el.question}</div>
+        <div className={style.output}>{el.answer}</div> */}
+        <div className={style.input}>{el.question}</div>
+          <div className={style.output}>{ el.answer}</div>
       </div>)}
 
       <div className={style.messsage_box}>
-        <input  value={inputvalue} onChange={e => setInputValue(e.target.value)} required className={style.input_text} placeholder="Chat with"></input>
+        <input  value={inputvalue} onChange={e => setInputValue(e.target.value)} required className={style.input_text} placeholder="Type start Interview"></input>
         <div className='flex gap-1 justify-center items-center' style={{ marginLeft: "-125px" }}>
           <button disabled={inputvalue==""} onClick={handleFetchData} className={style.input_btn} style={inputvalue ? sendIconStyle : { background: "hwb(0 0% 100% / 0.192)", color: "#fff" }} >
             <FontAwesomeIcon icon={faPaperPlane} />

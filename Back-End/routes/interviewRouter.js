@@ -54,7 +54,7 @@ interviewRouter.post("/generate-interview-questions", async (req, res) => {
         };
 
         let prompt = customPrompt || prompts[type];
-console.log({analyzeUserPreferences});
+// console.log({analyzeUserPreferences});
         if (userPreferences) {
             const analyzedPreferance = analyzeUserPreferences(userPreferences);
             if (analyzedPreferance) {
@@ -65,10 +65,10 @@ console.log({analyzeUserPreferences});
 
 
         if (topics) {
-            const topicsArray = topics.split(',');
-            if (topicsArray.length > 0) {
-                prompt += ` related to ${topicsArray.join(', ')}`;
-            }
+            // const topicsArray = topics.split(',');
+            // if (topicsArray.length > 0) {
+                prompt += `${topics} `;
+            // }
         }
 
         if (experienceLevel) {
