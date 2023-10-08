@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import Question from '../Componants/Question'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Question from "../Componants/Question";
 // import Question from '../Componants/Question'
 
 const InterviewPage = () => {
+  const [sevectValue, setSelectValue] = useState<String>("");
+  const [isQuestionPage, setIsQuestionPage] = useState<Boolean>(false);
 
-  const [sevectValue,setSelectValue]= useState<String>("")
-  const [isQuestionPage,setIsQuestionPage]= useState<Boolean>(false)
- 
   return (
     <div className="m-auto w-2/3 mt-16 ">
+
    {!isQuestionPage&&<h1 className="font-extrabold text-transparent text-center text-5xl bg-clip-text bg-gradient-to-r from-purple-300 to-pink-700">
       Let's Begin: Step into the Interview Hot Seat and Showcase Your Skills!
     </h1>}
@@ -74,4 +74,5 @@ const InterviewPage = () => {
   )
 }
 
-export default InterviewPage
+
+export default InterviewPage;

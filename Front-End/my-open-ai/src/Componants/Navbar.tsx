@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import logo from '../assets/logo1.jpg';
 
 interface NavbarProps {}
 
@@ -11,7 +12,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
     <nav className="flex justify-between py-5 items-center">
       <div className="w-60 rounded-full overflow-hidden">
         <Link to="/">
-          <img src="assets/logo1.jpg" alt="Logo" className="w-full h-auto" />
+          <img src={logo} alt="Logo" className="w-full h-auto" />
         </Link>
       </div>
       <div className="text-white flex gap-10 p-5">
