@@ -51,7 +51,7 @@ const Question = ({ sevectValue }) => {
     // sevectValue=="JavaScript Developer"?
     let topicArr=[]
     let bodyObject = {
-      type:sevectValue=="MERN Stack Developer"?"MERN"?sevectValue=="Java backend developer":"Java"?sevectValue=="Node Mongo Express Developer":"Node":"Javascript",
+      type:sevectValue,
       customPrompt: ``,
       topics:topicArr,
       userPreferences: "", experienceLevel: "beginner",

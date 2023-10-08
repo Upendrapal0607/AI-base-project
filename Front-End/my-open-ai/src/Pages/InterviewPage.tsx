@@ -28,12 +28,12 @@ const InterviewPage = () => {
         className="bg-gray-50 border m-auto w-3/4 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
       >
         <option selected>Select Your Track</option>
-        <option value="MERN Stack Developer">MERN Stack Developer</option>
-        <option value="Java backend developer">Java Backend Developer</option>
-        <option value="Node Mongo Express Developer">
+        <option value="MERN">MERN Stack Developer</option>
+        <option value="Java">Java Backend Developer</option>
+        <option value="Node">
           Node Backend Developer
         </option>
-        <option value="JavaScript Developer">
+        <option value="JavaScript">
         JavaScript Developer
         </option>
       </select>

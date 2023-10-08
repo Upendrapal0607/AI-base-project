@@ -2,7 +2,7 @@ const express= require("express");
 const { connection } = require("./db");
 const interviewRouter = require("./routes/interviewRouter");
 require("dotenv").config()
-const PORT = process.env.PORT
+const PORT = process.env.PORT||8080
 const app= express();
 app.use(express.json())
 app.use(require("cors")())
