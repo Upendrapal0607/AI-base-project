@@ -114,7 +114,7 @@ console.log({analyzeUserPreferences});
             question: chatCompletion.choices[0].message.content
         });
     } catch (error) {
-        res.status(400).send({ "errormsg": error.message, "message": "error" })
+        res.status(400).send({ "errormsg": error.message})
     }
 })
 

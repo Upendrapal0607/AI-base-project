@@ -5,6 +5,7 @@ require("dotenv").config()
 const PORT = process.env.PORT
 const app= express();
 app.use(express.json())
+app.use(require("cors")())
 app.use("/interview",interviewRouter)
 app.get("/",(req,res)=>{
     res.setHeader("content-type","text/html")
