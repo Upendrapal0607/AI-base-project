@@ -65,7 +65,7 @@ const Question = ({ sevectValue }) => {
     setData(prev => [...prev, newEntry]);
     // topicArr[0]=inputvalue
     // setData(prev=>[...prev,topicArr])
-    axios.post("http://localhost:8080/interview/generate-interview-questions", bodyObject).then(res => {
+    axios.post("https://kind-ruby-parrot-gown.cyclic.app/interview/generate-interview-questions", bodyObject).then(res => {
       console.log(res.data.question)
       const newEntry = { question: inputvalue, answer: res.data.question };
       // setData((prev) => [...prev, newEntry]);
