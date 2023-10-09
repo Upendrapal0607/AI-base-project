@@ -13,6 +13,7 @@ Welcome to the OpenI Integrated Interview Platform project! This platform provid
 
 - Upendra Pal
 - Arundev
+- Rajvardhan
 
 ## Technologies Used
 
